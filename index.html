@@ -1,146 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NeoTutor — Weekend Live Tuition (K–5)</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoBrainHub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: white;
+    }
+    header {
+      padding: 40px;
+      text-align: center;
+      background: #111;
+      border-bottom: 2px solid #222;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00aaff;
+      letter-spacing: 2px;
+    }
+    .tagline {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #111;
+      border-radius: 12px;
+      border: 1px solid #222;
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
+    }
+    h2 {
+      text-align: center;
+      color: #00aaff;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+    table th, table td {
+      padding: 14px;
+      text-align: center;
+      border: 1px solid #222;
+    }
+    table th {
+      background: #00aaff33;
+      color: #00aaff;
+      font-weight: bold;
+    }
+    table tr:hover {
+      background: #00aaff22;
+      transition: 0.3s;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid #222;
+    }
+    .whatsapp {
+      font-size: 1.5rem;
+      color: #25D366;
+      font-weight: bold;
+    }
+    .note {
+      margin-top: 10px;
+      color: #ccc;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="brand">NeoTutor</h1>
-      <p class="tag">Live weekend tuition for Kindergarten → Grade 5 — English • Math • Science</p>
-    </div>
+  <header>
+    <h1>NeoBrainHub</h1>
+    <div class="tagline">Worldwide Weekend Tutoring • Kindergarten to Grade 5 • Math • English • Science</div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-left">
-        <h2>Learn fast. Love learning.</h2>
-        <p>Weekend live classes, 1:1 or small groups. Fun, structured lessons with homework & full support.</p>
+  <div class="container">
+    <h2>Session Pricing</h2>
+    <table>
+      <tr>
+        <th>Session Length</th>
+        <th>Price (CAD)</th>
+      </tr>
+      <tr>
+        <td>30 Minutes</td>
+        <td>$10 CAD</td>
+      </tr>
+      <tr>
+        <td>1 Hour</td>
+        <td>$20 CAD</td>
+      </tr>
+      <tr>
+        <td>1 Hour 30 Minutes</td>
+        <td>$25 CAD</td>
+      </tr>
+    </table>
+  </div>
 
-        <ul class="features">
-          <li>Grades: K → 5</li>
-          <li>Subjects: English, Math, Science</li>
-          <li>Weekend-only: Saturday & Sunday (local time)</li>
-          <li>Flexible sessions: 30m / 60m / 90m</li>
-        </ul>
-
-        <div class="prices">
-          <div><strong>30 min</strong> — $10</div>
-          <div><strong>60 min</strong> — $20</div>
-          <div><strong>90 min</strong> — $25</div>
-        </div>
-
-        <div class="contact-quick">
-          <a class="call" href="tel:+16047914896">Call: +1 (604) 791-4896</a>
-          <a class="wa" target="_blank" rel="noopener" href="https://wa.me/16047914896?text=Hi%20I%27m%20interested%20in%20tuition">WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="booking-card">
-          <h3>Book a weekend class</h3>
-          <form id="bookingForm">
-            <label>Student name
-              <input name="studentName" required />
-            </label>
-
-            <label>Parent email
-              <input name="email" type="email" required />
-            </label>
-
-            <label>Phone (WhatsApp)
-              <input name="phone" required />
-            </label>
-
-            <label>Grade
-              <select name="grade" required>
-                <option value="">Choose grade</option>
-                <option value="Kindergarten">Kindergarten</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </label>
-
-            <label>Subject
-              <select name="subject" required>
-                <option value="">Choose subject</option>
-                <option>English</option>
-                <option>Math</option>
-                <option>Science</option>
-              </select>
-            </label>
-
-            <label>Session length
-              <select name="length" id="lengthSelect" required>
-                <option value="">Select duration</option>
-                <option value="30">30 minutes — $10</option>
-                <option value="60">60 minutes — $20</option>
-                <option value="90">90 minutes — $25</option>
-              </select>
-            </label>
-
-            <label>Preferred weekend day
-              <select name="day" id="daySelect" required>
-                <option value="">Choose</option>
-                <option value="Saturday">Saturday</option>
-                <option value="Sunday">Sunday</option>
-              </select>
-            </label>
-
-            <label>Preferred time slot (local time)
-              <select name="time" id="timeSelect" required></select>
-            </label>
-
-            <label>Additional notes (homework focus, topics, learning goals)
-              <textarea name="notes" rows="3"></textarea>
-            </label>
-
-            <div class="price-row">
-              <div id="priceText">Price: $0</div>
-              <button type="submit" id="bookBtn">Request Booking</button>
-            </div>
-
-            <p class="small">After requesting, you will get an email/WhatsApp confirmation and payment instructions.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="how">
-      <h3>How it works</h3>
-      <ol>
-        <li>Pick a grade, subject, length and weekend slot.</li>
-        <li>Request booking → receive confirmation + payment details.</li>
-        <li>Attend live class on Zoom / Google Meet. Homework assigned & reviewed.</li>
-      </ol>
-    </section>
-
-    <section class="about">
-      <h3>Why NeoTutor?</h3>
-      <p>Personalized lessons, clear learning plans, and real homework support across every topic for K–5.</p>
-    </section>
-
-    <section class="faqs">
-      <h3>FAQs</h3>
-      <details><summary>Do you teach weekdays?</summary><p>No — lessons are only on weekends (Sat & Sun).</p></details>
-      <details><summary>How do I pay?</summary><p>Secure payment instructions are sent after booking. You can pay via Stripe / card / local options.</p></details>
-      <details><summary>Can I get group lessons?</summary><p>Yes — message on WhatsApp to arrange group pricing.</p></details>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div>© NeoTutor • Weekend Tuition • K–5</div>
-      <div>Contact: <a href="tel:+16047914896">+1 (604) 791-4896</a> • <a target="_blank" rel="noopener" href="https://wa.me/16047914896">WhatsApp</a></div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <div class="contact">
+    <div class="whatsapp">WhatsApp: +1 604‑791‑4896</div>
+    <div class="note">Available worldwide • Weekend classes only • Homework help included</div>
+  </div>
 </body>
 </html>
